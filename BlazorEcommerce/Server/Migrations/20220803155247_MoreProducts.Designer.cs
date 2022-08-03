@@ -3,6 +3,7 @@ using BlazorEcommerce.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorEcommerce.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220803155247_MoreProducts")]
+    partial class MoreProducts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -190,7 +192,7 @@ namespace BlazorEcommerce.Server.Migrations
                             Id = 11,
                             CategoryId = 3,
                             Description = "Mirai (Japanese: 未来のミライ, Hepburn: Mirai no Mirai, literally Mirai of the Future[13]) is a 2018 Japanese animated adventure fantasy comedy film written and directed by Mamoru Hosoda and produced by Studio Chizu.[3] It premiered on May 16, 2018 at Directors' Fortnight[1] and released in Japan on July 20, 2018.[14] The film stars the voices of Moka Kamishiraishi, Haru Kuroki, Gen Hoshino, Kumiko Aso, Mitsuo Yoshihara, Yoshiko Miyazaki, Koji Yakusho and Masaharu Fukuyama.[8][9][10 It was released on August 23 2018 in Australia [15] September 20 in New Zealand[16] and November 2 in the United Kingdom and Ireland.[17] It was released on November 29 in the United States and Canada.[18] The film was nominated for Best Animated Feature Film at the 76th Golden Globe Awards,[19] Best Animated Feature at the 24th Critics' Choice Awards[20] and Best Animated Feature at the 91st Academy Awards, losing all three to Spider-Man: Into the Spider-Verse;[21] it is the sixth anime film, and the first non-Ghibli anime film, to receive an Academy Award nomination in the category.[22] The film also won Best Animated Feature — Independent at the 46th Annie Awards.[23]",
-                            ImageUrl = "https://upload.wikimedia.org/wikipedia/en/f/ff/MiraiPoster.jpeg",
+                            ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/e/ee/Nintendo-Super-Famicom-Set-FL.jpg",
                             Price = 20.99m,
                             Title = "Mirai (film)"
                         });
