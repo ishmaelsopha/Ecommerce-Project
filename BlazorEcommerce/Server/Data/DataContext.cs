@@ -70,7 +70,8 @@ namespace BlazorEcommerce.Server.Data
                     Title = "Violet Evergarden",
                     Description = "Violet Evergarden (Japanese: ヴァイオレット・エヴァーガーデン, Hepburn: Vaioretto Evāgāden) is a Japanese light novel series written by Kana Akatsuki and illustrated by Akiko Takase. It won the grand prize in the fifth Kyoto Animation Award's novel category in 2014, the first ever work to win a grand prize in any of the three categories (novel, scenario, and manga).[3] Kyoto Animation published the first light novel in December 2015, under their KA Esuma Bunko imprint.[4]A 13-episode anime television series adaptation by Kyoto Animation aired between January and April 2018 with several advance screenings taking place in 2017. The series was awarded Best Animation at the 2019 Crunchyroll Anime Awards.[5] An original video animation episode was released in July 2018, and a spin-off film premiered in Japan in September 2019. A second anime film, Violet Evergarden: The Movie, premiered in September 2020.",
                     ImageUrl = "https://upload.wikimedia.org/wikipedia/en/b/be/Violet_Evergarden_light_novel_volume_1_cover.jpg",
-                    CategoryId=1
+                    CategoryId = 1,
+                    Featured = true
                 }, new Product
                 {
                     Id = 4,
@@ -78,6 +79,7 @@ namespace BlazorEcommerce.Server.Data
                     Title = "Kill La Kill",
                     Description = "Kill la Kill (Japanese: キルラキル, Hepburn: Kiru Ra Kiru)[a] is a Japanese anime television series produced by Trigger. The series follows vagrant schoolgirl Ryuko Matoi on her search for her father's killer which brings her into violent conflict with Satsuki Kiryuin, the iron-willed student council president of Honnouji Academy, and her mother Ragyo Kiryuin's fashion empire. Ryuko, Satsuki, and others obtain martial arts superpowers from their clothes, which appear to have a will of their own.The series is Trigger's first original anime television project, directed by Hiroyuki Imaishi and written by Kazuki Nakashima, both of whom had previously worked together on Gurren Lagann in 2007 and would go on to work on Promare in 2019. Kill la Kill was broadcast in Japan on MBS' Animeism programming block between October 2013 and March 2014.An original video animation(OVA) was released as a 25th episode in September 2014.A manga adaptation by Ryō Akizuki began serialization in Kadokawa Shoten's Young Ace magazine from October 2013 to March 2015. A video game adaptation, titled Kill la Kill the Game: IF, was released in July 2019, with slight deviations to the main storyline of the anime.In North America,Aniplex of America licensed the anime for a simulcast with a home video release starting in July 2014.The series premiered in the United States on Adult Swim's Toonami block in February 2015.",
                     ImageUrl = "https://upload.wikimedia.org/wikipedia/en/a/a9/Killlakillpromo.jpg",
+                    Featured = true
                 },
                     new Product
                     {
@@ -86,6 +88,7 @@ namespace BlazorEcommerce.Server.Data
                         Title = "Zombieland Saga",
                         Description = "Zombie Land Saga (Japanese: ゾンビランドサガ, Hepburn: Zonbi Rando Saga) is an anime television series produced by MAPPA, Avex Pictures and Cygames. The series aired in Japan between October and December 2018. A second season titled Zombie Land Saga Revenge aired between April and June 2021. An anime film project has been announced. A manga adaptation that loosely follows the events of the anime, began serialization on Cygames' Cycomi website in October 2018; a spinoff series, titled Zombie Land Saga Sidestory: The First Zombie, started running in Ultra Jump magazine in May 2021. In the year 2008, high school student Sakura Minamoto is abruptly killed by a truck on the morning she plans to submit an idol application. Ten years later, Sakura, along with six legendary girls from various eras of Japan's history, are brought back as zombies by a man named Kotaro Tatsumi, who seeks to revitalize Saga Prefecture by putting together an all-zombie idol group that would become known as Franchouchou.",
                         ImageUrl = "https://upload.wikimedia.org/wikipedia/en/c/cd/Zombie_Land_Saga_Visual_2.jpg",
+
                     },
                     new Product
                     {
@@ -103,6 +106,7 @@ namespace BlazorEcommerce.Server.Data
                         Title = "Kiki's Delivery Service",
                         Description = "Kiki's Delivery Service (Japanese: 魔女の宅急便, Hepburn: Majo no Takkyūbin, lit. 'Witch's Express Home Delivery') is a 1989 Japanese animated fantasy film written, produced, and directed by Hayao Miyazaki, adapted from the 1985 novel by Eiko Kadono. It was animated by Studio Ghibli for Tokuma Shoten, Yamato Transport and the Nippon Television Network and distributed by the Toei Company. It tells the story of Kiki, a young witch who moves to a new town and uses her flying ability to earn a living. According to Miyazaki, the movie portrays the gulf between independence and reliance in teenage Japanese girls.[1] Kiki's Delivery Service was released in Japan on July 29, 1989,[2] and won the Animage Anime Grand Prix prize.[3] It was the first film released under a 15-year distribution partnership between The Walt Disney Company and Studio Ghibli.[4] Walt Disney Pictures produced an English dub in 1997, which premiered in United States theaters at the Seattle International Film Festival[5] on May 23, 1998. It was released on home video in the U.S. and Canada on September 1, 1998.[6]",
                         ImageUrl = "https://upload.wikimedia.org/wikipedia/en/0/07/Kiki%27s_Delivery_Service_%28Movie%29.jpg",
+                        Featured = true
 
                     },
                     new Product
@@ -137,7 +141,7 @@ namespace BlazorEcommerce.Server.Data
                         Description = "Mirai (Japanese: 未来のミライ, Hepburn: Mirai no Mirai, literally Mirai of the Future[13]) is a 2018 Japanese animated adventure fantasy comedy film written and directed by Mamoru Hosoda and produced by Studio Chizu.[3] It premiered on May 16, 2018 at Directors' Fortnight[1] and released in Japan on July 20, 2018.[14] The film stars the voices of Moka Kamishiraishi, Haru Kuroki, Gen Hoshino, Kumiko Aso, Mitsuo Yoshihara, Yoshiko Miyazaki, Koji Yakusho and Masaharu Fukuyama.[8][9][10 It was released on August 23 2018 in Australia [15] September 20 in New Zealand[16] and November 2 in the United Kingdom and Ireland.[17] It was released on November 29 in the United States and Canada.[18] The film was nominated for Best Animated Feature Film at the 76th Golden Globe Awards,[19] Best Animated Feature at the 24th Critics' Choice Awards[20] and Best Animated Feature at the 91st Academy Awards, losing all three to Spider-Man: Into the Spider-Verse;[21] it is the sixth anime film, and the first non-Ghibli anime film, to receive an Academy Award nomination in the category.[22] The film also won Best Animated Feature — Independent at the 46th Annie Awards.[23]",
                         ImageUrl = "https://upload.wikimedia.org/wikipedia/en/f/ff/MiraiPoster.jpeg",
                     }
-            );
+            ) ;
             modelBuilder.Entity<ProductVariant>().HasData(
                new ProductVariant
                {
