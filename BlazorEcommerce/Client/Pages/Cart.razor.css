@@ -28,3 +28,22 @@
     font-weight: 600;
     text-align: right;        
 }
+
+.btn-delete
+{
+    background: none;
+    border: none;
+    padding: 0px;
+    color: lavender;
+    font-size: 12px;
+}
+
+.btn-delete-hover
+{
+    text-decoration: underline;
+}
+
+.input-quantity
+{
+    width: 70px;
+}
