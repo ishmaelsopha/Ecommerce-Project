@@ -42,8 +42,7 @@
                     ImageUrl = product.ImageUrl,
                     Price = productVariant.Price,
                     ProductType = productVariant.ProductType.Name,
-                    ProductTypeId = productVariant.ProductTypeId,
-                    Quantity = item.Quantity
+                    ProductTypeId = productVariant.ProductTypeId
                 };
 
                 result.Data.Add(cartProduct);
