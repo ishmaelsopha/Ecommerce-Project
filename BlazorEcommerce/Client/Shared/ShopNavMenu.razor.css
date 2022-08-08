@@ -1,5 +1,6 @@
-.navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
+.navbar-toggler 
+{
+    color: rgba(255, 255, 255, 0.1);
 }
 
 .top-row {
@@ -24,7 +25,7 @@
     padding-top: 0.5rem;
 }
 
-    .nav-item ::deep a {
+    .nav-item::deep a {
         color: #d7d7d7;
         border-radius: 4px;
         height: 3rem;
