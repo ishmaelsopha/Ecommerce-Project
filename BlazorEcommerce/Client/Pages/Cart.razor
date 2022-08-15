@@ -50,17 +50,23 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        await CartService.GetCartItemsCount();
-        cartProducts = await CartService.GetCartProducts();
-        if (cartProducts == null || cartProducts.Count == 0)  
-        {
-            message = "Your cart is empty.";
-        }
+        await LoadCart();
     }
 
     private async Task RemoveProductFromCart(int productId, int productTypeId)
     {
         await CartService.RemoveProductFromCart(productId, productTypeId);
+        await LoadCart();
+    }
+
+    private async Task LoadCart()
+    {
+        await CartService.GetCartItemsCount();
+        cartProducts = await CartService.GetCartProducts();
+        if (cartProducts == null || cartProducts.Count == 0)
+        {
+            message = "Your cart is empty.";
+        }
     }
 
     private async Task UpdateQuantity(ChangeEventArgs e, CartProductResponse product)
