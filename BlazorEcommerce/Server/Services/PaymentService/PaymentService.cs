@@ -9,6 +9,9 @@ namespace BlazorEcommerce.Server.Services.PaymentService
         private readonly IAuthService _authService;
         private readonly IOrderService _orderService;
 
+        const string secret = "whsec_fb5d8eb10856644425b5a4b7c8c7820838aec35c2ecaf1a07a3b75bc0d4fb665";
+
+
         public PaymentService(ICartService cartService, 
             IAuthService authService, 
             IOrderService orderService)
@@ -43,6 +46,11 @@ namespace BlazorEcommerce.Server.Services.PaymentService
             var options = new SessionCreateOptions
             {
                 CustomerEmail = _authService.GetUserEmail(),
+                ShippingAddressCollection = 
+                new SessionShippingAddressCollectionOptions 
+                    {
+                        AllowedCountries = new List<string> {  "US"}
+                    },
                 PaymentMethodTypes = new List<string>
                 {
                     "card"
@@ -56,6 +64,34 @@ namespace BlazorEcommerce.Server.Services.PaymentService
             var service = new SessionService();
             Session session = service.Create(options);
             return session;
+        }
+
+        public async Task<ServiceResponse<bool>> FulfillOrder(HttpRequest request)
+        {
+            var json = await new StreamReader(request.Body).ReadToEndAsync();
+            try
+            {
+                var stripeEvent = EventUtility.ConstructEvent
+                    (
+                        json,
+                        request.Headers["Stripe-Signature"],
+                        secret
+                    );
+                if (stripeEvent.Type == Events.CheckoutSessionCompleted) 
+                {
+                    var session = stripeEvent.Data.Object as Session;
+                    var user = await _authService.GetUserByEmail(session.CustomerEmail);
+                    await _orderService.PlaceOrder(user.Id);
+
+                }
+
+                return new ServiceResponse<bool> { Data = true };
+
+            }
+            catch (StripeException e) 
+            {
+                return new ServiceResponse<bool> { Data = false, Success = false, Message = e.Message };
+            }
         }
     }
 }
